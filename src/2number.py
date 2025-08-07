@@ -1,3 +1,8 @@
+# 内置：abs、divmod、float、hex、int、max、min、oct、pow、round
+# 高级（math模块）：acos、asin、atan、atan2、ceil、cos、cosh、e、exp、fabs、floor、fmod、frexp、hypot、ldexp、log、log10、mod、pi、pow、sin、sinh、sqrt、tan、tanh
+# 复数函数(cmath模块)：acos、acosh、asin、asinh、atan、atanh、cos、cosh、e、exp、log、log10、pi、sin、sinh、sqrt、tan、tanh
+
+
 # 乘法
 "2.2" * 2
 # '2.22.2'
