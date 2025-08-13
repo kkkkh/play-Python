@@ -17,7 +17,9 @@ start to study python from 《Python 快速入门》
     - 高级（math模块）：acos、asin、atan、atan2、ceil、cos、cosh、e、exp、fabs、floor、fmod、frexp、hypot、ldexp、log、log10、mod、pi、pow、sin、sinh、sqrt、tan、tanh
     - 复数计算
     - 复数函数(cmath模块)：acos、acosh、asin、asinh、atan、atanh、cos、cosh、e、exp、log、log10、pi、sin、sinh、sqrt、tan、tanh
-  - Python中科学计算的基本算法 NumPy(执行密集型数值计算) [scipy](https://scipy.org/)
+  - Python中科学计算的基本算法
+    - [NumPy](https://numpy.org/) (执行密集型数值计算)
+    - [scipy](https://scipy.org/)
 - None
 - input 输入
 - 操作符
