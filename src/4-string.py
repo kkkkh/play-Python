@@ -18,7 +18,7 @@ print(len("Goodbye"))
 # 2、拼接字符串
 x = "Hello" + "World"
 print(x)
-# 'Hello World'
+# 'HelloWorld'
 
 print(8 * "x")
 # 'xxxxxxxx'
@@ -26,36 +26,36 @@ print(8 * "x")
 # 3、转义字符
 
 # 3、1
-print('m')
+print("m")
 # 'm'
-print('\155')
+print("\155")
 # 'm'
-print('\x6D')
+print("\x6D")
 # 'm'
 
 # 3、2
-print('1','\n')
+print("1", "\n")
 # '\n'
-print('2','\012')
+print("2", "\012")
 # '\n'
-print('3','\x0A')
+print("3", "\x0A")
 # '\n'
 
 # 3、3
 # \N{名称} 来插入具有特定 Unicode 名称的字符
-unicode_a ='\N{LATIN SMALL LETTER A}'      #A
+unicode_a = "\N{LATIN SMALL LETTER A}"  # A
 print(unicode_a)
 # 'a'                                            #1
-unicode_a_with_acute = '\N{LATIN SMALL LETTER A WITH ACUTE}'
+unicode_a_with_acute = "\N{LATIN SMALL LETTER A WITH ACUTE}"
 print(unicode_a_with_acute)
 # 'á'
-print("\u00E1")                                   #B
+print("\u00E1")  # B
 # 'á'
 
 # 3、4
-'a\n\tb' # 交互式环境下
-'a\n\tb'
-print('a\n\tb')
+"a\n\tb"  # 交互式环境下
+"a\n\tb"
+print("a\n\tb")
 # a
 #     b
 print("abc\n")
@@ -88,18 +88,18 @@ y = x.split("ss")
 print(y)
 # ['Mi', 'i', 'ippi']
 
-x = 'a b c d'
+x = "a b c d"
 y = x.split(None, 1)
 print(y)
 # ['a', 'b c d']
-y = x.split(' ', 1)
+y = x.split(" ", 1)
 print(y)
 # ['a', 'b c d']
-y = x.split(' ', 2)
+y = x.split(" ", 2)
 print(y)
 # ['a', 'b', 'c d']
-x.split(' ', 9)
-['a', 'b', 'c', 'd']
+x.split(" ", 9)
+["a", "b", "c", "d"]
 
 x = "this is a test"
 y = "-".join(x.split())
@@ -110,11 +110,11 @@ print(x.replace(" ", "-"))
 
 # 4、2、字符串转换为数值
 
-print(float('123.456'))
+print(float("123.456"))
 # 123.456
 # print(float('xxyy'))
 # ValueError: could not convert string to float: 'xxyy'
-print(int('3333'))
+print(int("3333"))
 # 3333
 # print(int('123.456'))                       #A
 # ValueError: invalid literal for int() with base 10: '123.456'
@@ -122,11 +122,11 @@ print(int('3333'))
 # ValueError: invalid literal for int() with base 10: '123.456'
 
 # int函数还可以接受第二个可选参数，用来指定转换输入的字符串时采用的数值进制
-print(int('10000', 8))                   #B
+print(int("10000", 8))  # B
 # 4096
-print(int('101', 2))
+print(int("101", 2))
 # 5
-print(int('ff', 16))
+print(int("ff", 16))
 # 255
 # print(int('123456', 6))              #C
 # ValueError: invalid literal for int() with base 6: '123456'
@@ -151,6 +151,7 @@ print(x.rstrip())
 # '  Hello,    World'
 
 import string
+
 print(string.whitespace)
 # print 打印不出来，再交互式环境下打印结果如下
 # ' \t\n\r\x0b\x0c'
@@ -159,20 +160,20 @@ print(" \t\n\r\v\f")
 # ' \t\n\r\x0b\x0c'
 
 x = "www.python.org"
-print(x.strip("w")) #A
+print(x.strip("w"))  # A
 # '.python.org'
-print(x.strip("gor")) #删除头尾所有的g、o、r字符
+print(x.strip("gor"))  # 删除头尾所有的g、o、r字符
 # 'www.python.'
-print(x.strip(".gorw")) #删除头尾所有的.、g、o、r、w字符
+print(x.strip(".gorw"))  # 删除头尾所有的.、g、o、r、w字符
 # 'python'
 
 x = "(name, date), \n"
 print(x.rstrip("),"))
 # (name, date), \n
 print(x.strip("),\n"))
-# (name, date), 
+# (name, date),
 print(x.strip("\n)(,"))
-# name, date), 
+# name, date),
 
 # 4、4、字符串搜索
 
@@ -217,7 +218,7 @@ table = x.maketrans("~^()", "!&[]")
 print(x.translate(table))
 # '!!!!!!x & [y % z]'
 
-x= "mississippI anDDDDDD"
+x = "mississippI anDDDDDD"
 print(x.capitalize())  # 首字母大写，同时会将其他字母转换为小写
 # 'Mississippi anddddddd'
 print(x.title())  # 每个单词首字母大写
@@ -228,7 +229,7 @@ print(x.upper())  # 全部转换为大写
 # 'MISSISSIPPI ANDDDDDD'
 print(x.lower())  # 全部转换为小写
 # 'mississippi anddddddd'
-x = '\t\n\t\t\t\t\t'
+x = "\t\n\t\t\t\t\t"
 print(x.expandtabs(1))  # 将1个制表符转换为1个空格
 # ' \n     '
 print(x.expandtabs(2))  # 将1个制表符转换为2个空格
@@ -238,20 +239,24 @@ print(x.expandtabs(2))  # 将1个制表符转换为2个空格
 
 text = "Hello, World"
 wordList = list(text)
-wordList[6:] = []                    #A
+wordList[6:] = []  # A
 wordList.reverse()
 text = "".join(wordList)
-print(text)                          #B
+print(text)  # B
 # ,olleH
 
 # 速测题：字符串的修改要把字符串中的所有标点符号替换为空格符，比较快捷的方案是什么？
 import string
+
 # 获取所有的标点字符串
 print(string.punctuation)
+
+
 def replace_punctuation_with_space(text):
     """将字符串中所有标点符号替换为空格"""
-    translator = str.maketrans(string.punctuation, ' ' * len(string.punctuation))
+    translator = str.maketrans(string.punctuation, " " * len(string.punctuation))
     return text.translate(translator)
+
 
 # 使用示例
 sample_text = "Hello, world! This is a test-string."
@@ -261,36 +266,36 @@ print(cleaned_text)  # 输出: "Hello  world  This is a test string "
 # 4、7、其他方法
 
 x = "123"
-print(x.isdigit()) # 是否包含数字
+print(x.isdigit())  # 是否包含数字
 # True
 x = "abc"
-print(x.isalpha()) # 是否包含字母
+print(x.isalpha())  # 是否包含字母
 # True
 x = "M"
-print(x.islower()) # 是否全为小写字母
+print(x.islower())  # 是否全为小写字母
 # False
-print(x.isupper()) # 是否全为大写字母
+print(x.isupper())  # 是否全为大写字母
 # True
 
 
-print(string.whitespace) # 空格字符串
-print(string.digits) # 数字字符串 0 1 2 3 4 5 6 7 8 9
-print(string.hexdigits) # 十六进制字符串 0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E F
-print(string.octdigits) # 八进制字符串 0 1 2 3 4 5 6 7
-print(string.ascii_lowercase) # 所有小写ASCII字母字符
-print(string.ascii_uppercase) # 所有大写ASCII字母字符
-print(string.ascii_letters) # 所有ASCII字母字符
+print(string.whitespace)  # 空格字符串
+print(string.digits)  # 数字字符串 0 1 2 3 4 5 6 7 8 9
+print(string.hexdigits)  # 十六进制字符串 0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E F
+print(string.octdigits)  # 八进制字符串 0 1 2 3 4 5 6 7
+print(string.ascii_lowercase)  # 所有小写ASCII字母字符
+print(string.ascii_uppercase)  # 所有大写ASCII字母字符
+print(string.ascii_letters)  # 所有ASCII字母字符
 
 # 速测题：将列表中的字符串中的双引号替换为空格
-x = ['"abc"', 'def', '"ghi"', '"klm"', 'nop']
-print((",".join(x).replace('"','').split(",")))
-print(list(map(lambda y: y.replace('"',''), x)))
+x = ['"abc"', "def", '"ghi"', '"klm"', "nop"]
+print((",".join(x).replace('"', "").split(",")))
+print(list(map(lambda y: y.replace('"', ""), x)))
 # ['abc', 'def', 'ghi', 'klm', 'nop']
 
 # 速测题2：如何查找"Mississippi"中最后一个字母p的位置？找到后又该如何只去除该字母呢？
 x = "Mississippi"
 index = x.rfind("p")
-y = x[:index] + x[index+1:]
+y = x[:index] + x[index + 1 :]
 print(y)
 # Mississipi
 
@@ -301,17 +306,17 @@ print(repr([1, 2, 3]))
 x = [1]
 x.append(2)
 x.append([3, 4])
-print('the list x is ' + repr(x))
+print("the list x is " + repr(x))
 # the list x is [1, 2, [3, 4]]
 print(repr(len))
 # <built-in function len>
 
 # 6、格式化字符串 format
 # 6.1
-x = "{0} is the {1} of {2}".format("Ambrosia", "food", "the gods") #1
+x = "{0} is the {1} of {2}".format("Ambrosia", "food", "the gods")  # 1
 print(x)
 # 'Ambrosia is the food of the gods'
-x = "{{Ambrosia}} is the {0} of {1}".format("food", "the gods") #2
+x = "{{Ambrosia}} is the {0} of {1}".format("food", "the gods")  # 2
 print(x)
 # '{Ambrosia} is the food of the gods'
 
@@ -319,24 +324,26 @@ print(x)
 x = "{food} is the food of {user}".format(food="Ambrosia", user="the gods")
 print(x)
 # 'Ambrosia is the food of the gods'
-x = "{0} is the food of {user[1]}".format("Ambrosia",user=["men", "the gods", "others"])
+x = "{0} is the food of {user[1]}".format(
+    "Ambrosia", user=["men", "the gods", "others"]
+)
 print(x)
 # 'Ambrosia is the food of the gods'
 
 # 6.3
-x = "{0:10} is the food of gods".format("Ambrosia")      #1
+x = "{0:10} is the food of gods".format("Ambrosia")  # 1
 print(x)
 # 'Ambrosia   is the food of gods'
-x = "{0:{1}} is the food of gods".format("Ambrosia", 10)   #2
+x = "{0:{1}} is the food of gods".format("Ambrosia", 10)  # 2
 print(x)
 # 'Ambrosia   is the food of gods'
 x = "{food:{width}} is the food of gods".format(food="Ambrosia", width=10)
 print(x)
 # 'Ambrosia   is the food of gods'
-x = "{0:>10} is the food of gods".format("Ambrosia")         #3
+x = "{0:>10} is the food of gods".format("Ambrosia")  # 3
 print(x)
 # '  Ambrosia is the food of gods'
-x = "{0:&>10} is the food of gods".format("Ambrosia")           #4
+x = "{0:&>10} is the food of gods".format("Ambrosia")  # 4
 print(x)
 # '&&Ambrosia is the food of gods'
 
@@ -370,11 +377,11 @@ x = "The %s contains: %s" % ("list", x)
 print(x)
 # 'The list contains: [1, 2, 'three']'
 # 输出宽度（字符总数）设定为6，将小数点后面的字符数设定为2，并将数字左对齐。
-x = "Pi is <%-6.2f>" % 3.14159 # use of the formatting sequence: %–6.2f
+x = "Pi is <%-6.2f>" % 3.14159  # use of the formatting sequence: %–6.2f
 print(x)
 # 'Pi is <3.14  >'
 
-num_dict = {'e': 2.718, 'pi': 3.14159}
+num_dict = {"e": 2.718, "pi": 3.14159}
 print("%(pi).2f - %(pi).4f - %(e).2f" % num_dict)
 # 3.14 - 3.1416 - 2.72
 
@@ -392,10 +399,10 @@ print("a", "b", "c", sep="|", end="\n\n")
 x = "%.2f" % 1.1111
 print(x)
 # '1.11'
-x = "%(a).2f" % {'a':1.1111}
+x = "%(a).2f" % {"a": 1.1111}
 print(x)
 # '1.11'
-x = "%(a).08f" % {'a':1.1111}
+x = "%(a).08f" % {"a": 1.1111}
 print(x)
 # '1.11110000'
 
@@ -418,30 +425,34 @@ print(f"pi is {pi:10.2}")
 
 # 9 Bytes
 
-unicode_a_with_acute = '\N{LATIN SMALL LETTER A WITH ACUTE}'
+unicode_a_with_acute = "\N{LATIN SMALL LETTER A WITH ACUTE}"
 print(unicode_a_with_acute)
 # 'á'
-xb = unicode_a_with_acute.encode()    #1
+xb = unicode_a_with_acute.encode()  # 1
 print(xb)
-# b'\xc3\xa1'                               #2 
+# b'\xc3\xa1'                               #2
 # xb += 'A'                              #3
 # Traceback (most recent call last):
 #   File "<pyshell#35>", line 1, in <module>
 #     xb += 'A'
 # TypeError: can't concat str to bytes
-x = xb.decode()                           #4
+x = xb.decode()  # 4
 print(x)
 # 'á'
-print('你好'.encode())
+print("你好".encode())
 # b'\xe4\xbd\xa0\xe5\xa5\xbd'
 
 # 研究题
-with open("./src/moby_01.txt") as infile, open("./src/moby_01_clean.txt", "w") as outfile:
+with open("./src/moby_01.txt") as infile, open(
+    "./src/moby_01_clean.txt", "w"
+) as outfile:
     for line in infile:
         # 全都转成大写或小写
         line = line.upper()
         # 删除标点符号
-        line = line.translate(str.maketrans(string.punctuation, ' ' * len(string.punctuation)))
+        line = line.translate(
+            str.maketrans(string.punctuation, " " * len(string.punctuation))
+        )
         # 拆分为单词
         words = line.split()
         # 将全部单词按一行写入

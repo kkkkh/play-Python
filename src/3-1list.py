@@ -5,7 +5,7 @@ len([])
 # 0
 len([0])
 # 1
-len([[1,2,3,3],7])
+len([[1, 2, 3, 3], 7])
 
 
 # 索引
@@ -28,7 +28,7 @@ print(x[:3])
 print(x[2:])
 # ['third', 'fourth']
 y = x[:]
-y[0] = '1 st'
+y[0] = "1 st"
 print(y)
 # ['1 st', 'second', 'third', 'fourth']
 print(x)
@@ -61,13 +61,13 @@ print(x)
 # 2、添加
 # 在列表末尾添加元素
 x = [1, 2, 3, 4]
-x[len(x):] = [5, 6, 7]
+x[len(x) :] = [5, 6, 7]
 print(x)
 # [1, 2, 3, 4, 5, 6, 7]
 
 # 在列表头部添加元素
 x = [1, 2, 3, 4]
-x[:0] = [-1,0]
+x[:0] = [-1, 0]
 print(x)
 # [-1, 0, 1, 2, 3, 4]
 
@@ -121,7 +121,7 @@ print(x)
 # del list[n]的功能与list[n:n+1] = [​]是一样的
 # 而del list[m:n]的功能则与list[m:n] = [​]相同
 
-x = ['a', 2, 'c', 7, 9, 11]
+x = ["a", 2, "c", 7, 9, 11]
 del x[1]
 print(x)
 # ['a', 'c', 7, 9, 11]
@@ -153,13 +153,12 @@ print(x)
 # 切片插入
 data_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 last_three = data_list[-3:]  # 获取最后 3 个数据项
-del data_list[-3:]           # 从原列表中删除最后 3 个数据项
+del data_list[-3:]  # 从原列表中删除最后 3 个数据项
 data_list[0:0] = last_three  # 将最后 3 个数据项插入到列表开头
 print(data_list)
 # 循环插入 pop 和 insert
 data_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for _ in range(3):
-    item = data_list.pop()      # 移除列表末尾的元素
-    data_list.insert(0, item)   # 将元素插入到列表开头
+    item = data_list.pop()  # 移除列表末尾的元素
+    data_list.insert(0, item)  # 将元素插入到列表开头
 print(data_list)
-

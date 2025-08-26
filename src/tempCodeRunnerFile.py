@@ -1,5 +1,2 @@
-[1, 2, 3, 4]
-y = ['a', 'b', 'c']           #A 
-z = zip(x, y)
-list(z)
-[(1, 'a'), (2, 'b'), (3, 'c')]    #B
+Path("book1.doc.tmp")
+new_path.unlink()
