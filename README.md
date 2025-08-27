@@ -76,14 +76,14 @@ start to study python from 《Python 快速入门》
   ```
 ## 9 文件系统的使用
 - os(旧)：
-  - os.getcwd、os.listdir、os.curdir
-  - os.path.join、os.path.split、os.path.basename、os.path.dirname、os.path.splitext、os.path.commonprefix、os.path.isabs等等
-  - os.path.exists、os.path.isdir、os.path.isfile、os.path.getsize、islink
-  - glob.glob("*")
-  - os.walk
+  - os.getcwd 当前工作目录、os.listdir 列出目录内容、os.curdir 当前目录
+  - os.path.join 路径拼接、os.path.split 路径拆分、os.path.basename 文件名、os.path.dirname 父目录、os.path.splitext 文件后缀、os.path.commonprefix 公共前缀、os.path.isabs 是否是绝对路径
+  - os.path.exists 是否存在、os.path.isdir 是否是目录、os.path.isfile 是否是文件、os.path.getsize 文件大小、os.path.islink 是否是符号链接
+  - glob.glob("*") 匹配所有文件
+  - os.walk 递归遍历目录
 - pathlib（新）：
   - `cur_path = pathlib.Path()`
-  - cur_path.cwd()、cur_path.joinpath、cur_path / "bin"
-  - cur_path.parts、cur_path.name、cur_path.parent、cur_path.suffix
-  - cur_path.resolve()、iterdir、cur_path.glob、
-  - is_file、is_symlink
+  - cur_path.cwd() 当前工作目录、cur_path.joinpath 路径拼接、cur_path / "bin" 路径拼接
+  - cur_path.parts 路径拆分、cur_path.name 文件名、cur_path.parent 父目录、cur_path.suffix 文件后缀
+  - cur_path.resolve() 绝对路径、cur_path.iterdir()路径迭代器 、cur_path.glob() 匹配所有文件
+  - cur_path.is_file() 是否是文件、cur_path.is_symlink() 是否是符号链接
