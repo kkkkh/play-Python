@@ -1,8 +1,12 @@
 # play-Python
 
-start to study python from 《Python 快速入门》
+start to study python from 《Python 快速入门》（第3版）
 
+- [源代码连接](https://box.lenovo.com/l/boXrs7)
+- [github](https://github.com/nceder/qpbe3e)
 - [python 3.13 文档](https://docs.python.org/zh-cn/3.13/reference/index.html)
+
+
 
 ## 1、基础知识
 - 缩进、代码块构建：使用缩进、不用大括号

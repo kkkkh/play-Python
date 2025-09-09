@@ -1,2 +1,4 @@
-Path("book1.doc.tmp")
-new_path.unlink()
+try:
+    raise MyError("Some information about what went wrong")
+except MyError as error:
+    print("Situation:", error)
