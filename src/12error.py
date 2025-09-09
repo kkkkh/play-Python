@@ -55,7 +55,7 @@
 #     .
 #     .
 
-
+# 1、raise
 alist = [1, 2, 3]
 # element = alist[7]
 # Traceback (innermost last):
@@ -68,7 +68,7 @@ alist = [1, 2, 3]
 #   File "<stdin>", line 1, in ?
 # IndexError: Just kidding
 
-
+# 2、try except finally
 # try:
 #     body
 # except exception_type1 as var1:
@@ -98,7 +98,7 @@ alist = [1, 2, 3]
 #     print("Finally")
 
 
-# 自定义异常
+# 3、自定义异常
 
 
 class MyError(Exception):
@@ -128,7 +128,7 @@ class MyError(Exception):
 #         )
 #     )
 
-# assert
+# 4、assert
 x = (1, 2, 3)
 # assert len(x) > 5
 # Traceback (most recent call last):
@@ -146,7 +146,7 @@ x = (1, 2, 3)
 # except IndexError as error:
 #     exception code
 
-# 8 正常计算过程中的异常
+# 5、正常计算过程中的异常
 
 # def cell_value(string):
 #     try:
@@ -174,7 +174,7 @@ except KeyError as e:
 x = 1
 print(x)
 
-# 14.3 Context managers
+# 6、with 上下文管理器
 
 # try:
 #     infile = open(filename)

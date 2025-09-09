@@ -78,7 +78,7 @@ start to study python from 《Python 快速入门》（第3版）
   if __name__ == "__main__":
       main()
   ```
-## 9 文件系统的使用
+## 9、文件系统的使用
 - os(旧)：
   - os.getcwd 当前工作目录、os.listdir 列出目录内容、os.curdir 当前目录
   - os.path.join 路径拼接、os.path.split 路径拆分、os.path.basename 文件名、os.path.dirname 父目录、os.path.splitext 文件后缀、os.path.commonprefix 公共前缀、os.path.isabs 是否是绝对路径
@@ -91,3 +91,22 @@ start to study python from 《Python 快速入门》（第3版）
   - cur_path.parts 路径拆分、cur_path.name 文件名、cur_path.parent 父目录、cur_path.suffix 文件后缀
   - cur_path.resolve() 绝对路径、cur_path.iterdir()路径迭代器 、cur_path.glob() 匹配所有文件
   - cur_path.is_file() 是否是文件、cur_path.is_symlink() 是否是符号链接
+## 10、文件的读写
+- 打开文件、关闭文件、写入文件、二进制
+- pathlib Path对象来读写文本和二进制文件、使用简便（无法追加）
+- 屏幕输入、输出
+- 重定向：
+  - sys.stdin.readline、
+  - sys.stdout.write、
+  - `f = open("outfile.txt", "w") sys.stdout = f`
+- struct 二进制数据的读写(要处理的文件是由其他程序生成或使用的)
+- pickle 任何数据结构写入文件，再从文件中读回并重建该数据结构
+- shelve 字典，存储在磁盘，通过键来访问数据，不受内存大小的限制
+## 11、异常处理
+- 异常类型
+- raise 抛出异常
+- try except else finally 捕捉、处理异常
+- 自定义异常
+- assert 断言
+- 正常计算过程中的异常
+- with 上下文管理器
