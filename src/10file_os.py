@@ -318,15 +318,15 @@ print(y)
 
 x = list(cur_path.glob("*.txt"))
 print(x)
-# new_path = Path("APP")
-# new_path = cur_path / "APP"
-# new_path = cur_path.joinpath("APP")
+# new_path = Path("test")
+# new_path = cur_path / "test"
+# new_path = cur_path.joinpath("test")
 new_path.mkdir(parents=True, exist_ok=True)
 
 for i in x:
     if not i.is_symlink():
         old_path = Path(i.name)
-        new_path = Path(cur_path.joinpath("APP", i.name))
+        new_path = Path(cur_path.joinpath("test", i.name))
         old_path.rename(new_path)
 
 # 4、walk

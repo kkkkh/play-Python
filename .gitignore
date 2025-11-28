@@ -1,0 +1,24 @@
+# Python 编译生成的文件
+__pycache__/
+
+*.py[cod]
+*$py.class
+/**/ecdictSqlite.db
+/**/ecdict.csv
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# IDE 配置文件（可选，看你用的编辑器）
+.vscode/
+.idea/
+
+# 其他你不想提交的文件
+*.log
+.pdm-python
+uploads/
+resource/
+
+/**/*.mp3
+/**/*.lrc

@@ -1,0 +1,15 @@
+[project]
+name = "play-Python"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "zhanghaotian", email = "haotian.zhang5@transsion.com"},
+]
+dependencies = ["tqdm>=4.67.1", "requests>=2.32.5", "faster-whisper>=1.2.1", "pyannote-audio>=4.0.2"]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
