@@ -1,8 +1,16 @@
-from lrc.index import generate_lrc,batch_generate_lrc
-from download.index import batch_download
+# from app.utils.generate_audio import generate_audio
+# from app.utils.generate_lrc import generate_lrc,batch_generate_lrc
+from utils.download_audio import batch_download_audio
+from utils.sclice_audio import sclice_audio
 
-# generate_lrc("./app/sources/englishpod_0001pb.mp3", "./app/sources/englishpod_0001pb.lrc")
 if __name__ == "__main__":
-  # batch_download(10,11,save_dir = "./app/resource", group_id=1)
-  batch_generate_lrc(10,11,save_dir = "./app/resource",group_id=1)
+  batch_download_audio(1,11,save_dir = "./app/TEST", group_id=1)
+  # batch_generate_lrc(10,11,save_dir = "./app/resource",group_id=1)
+  # sclice_audio(dir_path="./app/resource")
 
+
+
+# text = """
+# 我认为只有在深入地研究了人以后，才能创造人物，就像要讲一种语言就得先认真学习这种语言一样。既然我还没到能够创造的年龄，那就只好满足于平铺直叙了。因此，我请读者相信这个故事的真实性，故事中所有的人物，除女主人公以外，至今尚在人世。此外，我搜集在这里的大部分材料，在巴黎还有一些人证；如果我的证据还不够的话，他们可以为我作证。由于一种特殊的机缘，只有我才能把这个故事写出来，因为惟独我洞悉这件事情的始末，否则是不可能写出一篇完整、动人的故事来的。下面就来讲讲我是怎样知道这些详情细节的。一八四七年三月十二日，我在拉菲特街看到一张黄色的巨幅广告，广告宣称将拍卖家具和大量珍玩。这次拍卖是在物主死后举行的。广告上没有提到死者的姓名，只是说拍卖将于十六日中午十二点到下午五点在昂坦街九号举行。广告上还附带通知，大家可以在十三日和十四日两天参观住宅和家具。我向来是个珍玩爱好者，决不能坐失良机，即使不买，也要去看看。第二天，我就到昂坦街九号去了。
+# """
+# generate_audio(text, "chahua_nv.mp3")

@@ -2,7 +2,7 @@ from pyannote.audio import Pipeline
 import torch
 from faster_whisper import WhisperModel
 import re
-from app.lrc.index import write_lrc
+from generate_lrc import write_lrc
 # 后边再完善
 def _generate_lrc_role(read_file_path, write_file_path):
     # 1. 使用 faster-whisper 生成文字
