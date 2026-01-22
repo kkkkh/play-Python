@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "kkkkh", email = "13693256971@163.com"},
 ]
-dependencies = ["tqdm>=4.67.1", "requests>=2.32.5", "faster-whisper>=1.2.1", "pyannote-audio>=4.0.2"]
+dependencies = ["tqdm>=4.67.1", "requests>=2.32.5", "faster-whisper>=1.2.1", "pyannote-audio>=4.0.2", "langchain>=1.2.6", "langchain-openai>=1.1.7", "pydantic>=2.12.5", "dotenv>=0.9.9"]
 requires-python = "==3.11.*"
 readme = "README.md"
 license = {text = "MIT"}

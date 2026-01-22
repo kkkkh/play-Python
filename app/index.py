@@ -1,13 +1,13 @@
 # from app.utils.generate_audio import generate_audio
 # from app.utils.generate_lrc import generate_lrc,batch_generate_lrc
-from utils.download_audio import batch_download_audio
-from utils.sclice_audio import sclice_audio
-
+# from utils.download_audio import batch_download_audio
+# from utils.sclice_audio import batch_sclice_audio
+from utils.patch_add_data import batch_add_data_resources
 if __name__ == "__main__":
-  batch_download_audio(1,11,save_dir = "./app/TEST", group_id=1)
-  # batch_generate_lrc(10,11,save_dir = "./app/resource",group_id=1)
-  # sclice_audio(dir_path="./app/resource")
-
+  # batch_download_audio(1,10,save_dir = "./app/test", group_id=1)
+  # batch_generate_lrc(10,10,save_dir = "./app/resource",group_id=1)
+  # batch_sclice_audio(9,10,dir_path="./app/resource",group_id=1)
+  batch_add_data_resources(11,100,group_id=1)
 
 
 # text = """

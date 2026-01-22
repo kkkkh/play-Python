@@ -26,10 +26,11 @@ def join_download_path(id):
 
 
 def batch_download_audio(*params,save_dir = "./app/sources",group_id=1):
-  os.makedirs(save_dir, exist_ok=True)
-  links = list(map(lambda id: (join_download_path(id), save_dir, group_id, id), range(*params)))
-  with ThreadPoolExecutor(max_workers=2) as executor:
-      for result in executor.map(download_audio, links):
-          print(result)
+    os.makedirs(save_dir, exist_ok=True)
+    (start,end) = params
+    links = list(map(lambda id: (join_download_path(id), save_dir, group_id, id), range(start, end + 1)))
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        for result in executor.map(download_audio, links):
+            print(result)
 
 

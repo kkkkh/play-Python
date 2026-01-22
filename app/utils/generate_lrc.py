@@ -79,12 +79,13 @@ def batch_generate_lrc(*params,save_dir = "./app/resource",group_id=1 ):
     # lrc_list = list(map(lambda num: join_lrc_path(num), range(*params)))
     audio_list = []
     lrc_list = []
-    for id in range(*params):
+    (start,end) = params
+    for id in range(start, end + 1):
         audio_list.append(join_path(save_dir, group_id, id, 'mp3'))
         lrc_list.append(join_path(save_dir, group_id, id, 'lrc'))
     # print(audio_list)
     # print(lrc_list)
-    desc = f"生成序号：{params[0]}-{params[1]}"
+    desc = f"生成序号：{start}-{end}"
     with ProcessPoolExecutor(max_workers=2) as executor:
         for result in tqdm(executor.map(generate_lrc, audio_list, lrc_list), total=len(audio_list),desc=desc):
             print(result)
